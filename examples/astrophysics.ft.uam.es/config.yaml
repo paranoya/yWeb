@@ -1,0 +1,24 @@
+production_host: "astrophysics.ft.uam.es"
+
+default_header:
+  base_url: "file://astrophysics.ft.uam.es"
+  base_title: "Astrophysics @ UAM -"
+  template:
+    head: 'template_head.html'
+    foot: 'template_foot.html'
+  css:
+    all: "common_files/ft_simple.css"
+    print: "common_files/print.css"
+  icon: "common_files/logo_Astro.ico"
+  meta:
+    Keywords: "Astrophysics, UAM, research"
+    Description: "Astrophysics research group at the Universidad Autónoma de Madrid (UAM)"
+    Author: "Yago Ascasibar"
+    Robots: "all"
+
+menu:
+  Welcome:
+    file: 'index.html'
+    frame: "https://docs.google.com/document/d/e/2PACX-1vQI0VLRHuTOqsZMrgsDr4on996-d2eaD2svsheIFUKKuidMg22z8J9h1ywMmS9i75K5VVrDn7ZO1stv/pub?embedded=true"
+#  People: "local_file"
+#    filename: "people.html"
