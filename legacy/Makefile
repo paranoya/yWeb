@@ -1,0 +1,46 @@
+#------------------------------------------------------
+
+BAK_DIR = Backup/$(shell date "+%y%m%d_%H%M")
+
+# OPTIONS = -O3 -Wall -Iinclude -DCOMMON_FILES=\"$(BASE_DIR)/web_admin/common_files/\"
+OPTIONS = -O3 -Wall -Iinclude -DADMIN_DIR=\"$(PWD)/../\"
+# OPTIONS = -O3 -Wall -Iinclude -DADMIN_DIR=\"astro.ft.uam.es/~yago/\"
+COMPILER = g++ $(OPTIONS)
+
+LIBRARIES = -lm
+
+#------------------------------------------------------
+default: yWeb
+#------------------------------------------------------
+	#-------------------------------------------#
+	# yWeb                                      #
+	#                                           #
+	#           Yago Ascasibar (UAM, Fall 2011) #
+	#-------------------------------------------#
+	#                    ... Paranoy@ Rulz! ;^D
+
+#------------------------------------------------------
+yWeb:
+#------------------------------------------------------
+	$(COMPILER) -o bin/yWeb src/yWeb.cpp $(LIBRARIES)
+	./bin/yWeb $(USERNAME)
+#	./bin/yWeb template
+#	./bin/yWeb yago
+#	./bin/yWeb web_admin
+#	./bin/yWeb observatorio
+
+#------------------------------------------------------
+clean:
+#------------------------------------------------------
+	rm -f $(HTML_DIR)/*.html *~ */*~ */*/*~ */*/*/*~
+
+
+#------------------------------------------------------
+backup:
+#------------------------------------------------------
+	mkdir $(BAK_DIR)
+	cp -r Makefile include/ src/ $(BAK_DIR)
+	
+#------------------------------------------------------
+#                              ... Paranoy@ Rulz! ;^D
+#------------------------------------------------------
