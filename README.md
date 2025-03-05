@@ -1,2 +1,6 @@
 # yWeb
-Simple web content manager
+
+This is an updated version of the content manager I have used over the years.
+
+Have fun,
+... Paranoy@ Rulz! ;^D
